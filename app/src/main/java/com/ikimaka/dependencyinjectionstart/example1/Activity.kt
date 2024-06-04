@@ -2,12 +2,17 @@ package com.ikimaka.dependencyinjectionstart.example1
 
 class Activity {
 
-    val monitor = Monitor()
-    val keyboard = Keyboard()
-    val mouse = Mouse()
-    val computerTower = ComputerTower(Storage(), Memory(), Processor())
+    lateinit var computer: Computer
+    lateinit var keyboard: Keyboard
+
+    init {
+        Component().inject(this)
+    }
 
 
 
-    val computer = Computer(monitor, computerTower, keyboard, mouse)
+
+
+
+
 }
