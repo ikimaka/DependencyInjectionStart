@@ -6,11 +6,7 @@ class Activity {
 
 
     @Inject
-    lateinit var keyboard: Keyboard
-    @Inject
-    lateinit var mouse: Mouse
-    @Inject
-    lateinit var monitor: Monitor
+    lateinit var computer: Computer
 
     init {
         //Component().inject(this)

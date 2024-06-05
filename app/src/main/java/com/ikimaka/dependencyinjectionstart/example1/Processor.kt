@@ -1,4 +1,6 @@
 package com.ikimaka.dependencyinjectionstart.example1
 
-class Processor {
+import javax.inject.Inject
+
+class Processor{
 }
