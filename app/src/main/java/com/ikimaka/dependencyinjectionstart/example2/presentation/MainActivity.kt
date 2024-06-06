@@ -3,10 +3,7 @@ package com.ikimaka.dependencyinjectionstart.example2.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ikimaka.dependencyinjectionstart.R
-import com.ikimaka.dependencyinjectionstart.example1.Activity
-import com.ikimaka.dependencyinjectionstart.example2.di.ContextModule
 import com.ikimaka.dependencyinjectionstart.example2.di.DaggerApplicationComponent
-import com.ikimaka.dependencyinjectionstart.example2.di.DataModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +13,8 @@ class MainActivity : AppCompatActivity() {
 
     private val component by lazy {
         DaggerApplicationComponent.builder()
-            .contextModule(ContextModule(application))
+            .context(application)
+            .timeMillis(System.currentTimeMillis())
             .build()
     }
 
