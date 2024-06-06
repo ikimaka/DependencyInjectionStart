@@ -3,10 +3,10 @@ package com.ikimaka.dependencyinjectionstart.example2.data.database
 import android.content.Context
 import android.util.Log
 import com.ikimaka.dependencyinjectionstart.R
+import com.ikimaka.dependencyinjectionstart.example2.di.ApplicationScope
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
 class ExampleDatabase @Inject constructor(
     private val context: Context,
     private val timeMillis: Long
